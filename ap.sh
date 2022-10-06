@@ -60,7 +60,7 @@ function PushFun() {
     echo ""
 
     if [[ "$2" == "F" ]]; then
-        git push -u origin main
+        git push -u -f origin main
     else
         git push -u origin main
     fi
@@ -84,7 +84,7 @@ if [ -a ".git" ]; then
     echo "N for New Setup."
     echo "P for Push."
     echo "U for Update."
-    echo "UF for Update. (resolve non-fast-forward)"
+    echo "FU for Update. (resolve non-fast-forward)"
     echo "-------------------------------"
     echo ""
     read -r optiony
@@ -96,7 +96,7 @@ if [ -a ".git" ]; then
         PushFun
     elif [[ "$optiony" == "U" ]]; then
         PushFun "U"
-    elif [[ "$optiony" == "UF" ]]; then
+    elif [[ "$optiony" == "FU" ]]; then
         PushFun "U" "F"
     else
         echo ""
