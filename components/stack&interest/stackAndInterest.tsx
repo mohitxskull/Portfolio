@@ -5,6 +5,7 @@ import React from 'react';
 //import { ArrowUpRight } from 'tabler-icons-react';
 
 const Technologies = [
+  'NEAR Blockchain',
   'Javascript (ES6+)',
   'Typescript',
   'Mantine',
@@ -110,7 +111,7 @@ const StackAndInterest = () => {
                 }}
               >
                 Front-end & Back-end Development, Cybersecurity, Web Design,
-                Electronics, Business
+                Electronics, Business, Blockchain
               </Text>
             </Group>
           </Box>

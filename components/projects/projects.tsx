@@ -31,7 +31,7 @@ const Projects = () => {
 
           <Group grow position="apart" style={{ width: '100%' }}>
             <Text align="center" size="sm" color="dimmed">
-              PROJECTS (2)
+              PROJECTS (3)
             </Text>
             <Group position="center">
               <Group direction="column" spacing={0}>
@@ -58,7 +58,7 @@ const Projects = () => {
                 fontFamily: 'geakosa-s',
                 fontSize: SmallerScreen ? 100 : 150,
                 lineHeight: 1.5,
-                letterSpacing: 5,
+                letterSpacing: 1,
               }}
             >
               SEAGOAT
@@ -137,7 +137,7 @@ const Projects = () => {
                 fontFamily: 'geakosa-s',
                 fontSize: SmallerScreen ? 100 : 150,
                 lineHeight: 1.5,
-                letterSpacing: 5,
+                letterSpacing: 1,
               }}
             >
               KISS
@@ -176,6 +176,80 @@ const Projects = () => {
                     <ArrowUpRight size={20} />
                   </Group>
                 </Text> */}
+              </Group>
+            </Group>
+          </Group>
+
+          <Box
+            mt="xl"
+            style={{ height: '2px', width: '100%', backgroundColor: '#909296' }}
+          />
+
+          <Group grow position="apart" style={{ width: '100%' }}>
+            <Text />
+            <Group position="center">
+              <Group direction="column" spacing={0}>
+                <Text
+                  style={{ lineHeight: 1 }}
+                  align="center"
+                  ml="xl"
+                  size="sm"
+                  color="dimmed"
+                >
+                  FRONT-END
+                </Text>
+                <Text align="center" ml="xl" size="sm" color="dimmed">
+                  WEB APPLICATION
+                </Text>
+              </Group>
+            </Group>
+          </Group>
+
+          <Group grow direction={SmallerScreen ? 'column' : 'row'}>
+            <Text
+              color="#777777"
+              style={{
+                fontFamily: 'geakosa-s',
+                fontSize: SmallerScreen ? 100 : 150,
+                lineHeight: 1.5,
+                letterSpacing: 1,
+              }}
+            >
+              HIDDENMAIL
+            </Text>
+
+            <Group direction="column">
+              <Text
+                color="#aaaaaa"
+                style={{ maxWidth: '400px', lineHeight: 1.2 }}
+              >
+                Used 1SecMail API!
+              </Text>
+              <Group>
+                <Text
+                  component="a"
+                  href="https://hiddenmail.vercel.app"
+                  weight={800}
+                  target="_blank"
+                  color="#883ddf"
+                >
+                  <Group spacing={5}>
+                    Visit
+                    <ArrowUpRight size={20} />
+                  </Group>
+                </Text>
+                <Text
+                  component="a"
+                  href="https://github.com/servedbyskull/HiddenMail"
+                  weight={800}
+                  target="_blank"
+                  color="#883ddf"
+                >
+                  <Group spacing={5}>
+                    Github
+                    <ArrowUpRight size={20} />
+                  </Group>
+                </Text>
               </Group>
             </Group>
           </Group>
