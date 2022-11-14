@@ -16,6 +16,12 @@ const Technologies = [
   'MongoDB',
 ];
 
+// const ExpTechnologies = [
+//   {
+//     tech: '',
+//   },
+// ];
+
 const StackAndInterest = () => {
   const SmallerScreen = useMediaQuery('(max-width: 768px)');
 

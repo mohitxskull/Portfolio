@@ -110,17 +110,6 @@ const Contact = () => {
               >
                 <BrandGithub color="#000" />
               </ActionIcon>
-              {/* <ActionIcon
-                variant="transparent"
-                onClick={() =>
-                  window.open(
-                    'https://www.freelancer.com/u/mohitxskull',
-                    '_blank'
-                  )
-                }
-              >
-                <LetterF color="#000" />
-              </ActionIcon> */}
             </Group>
           </Group>
         </Group>

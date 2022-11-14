@@ -2,15 +2,7 @@ import { Group, Image, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { ParallaxLayer } from '@react-spring/parallax';
 
-const Home = ({
-  Name,
-  ScrollLock,
-  OtherVisible,
-}: {
-  Name: string;
-  ScrollLock: boolean;
-  OtherVisible: boolean;
-}) => {
+const Home = () => {
   const SmallerScreen = useMediaQuery('(max-width: 768px)');
 
   return (
@@ -42,29 +34,16 @@ const Home = ({
           position="center"
           style={{ zIndex: 1 }}
         >
-          {/* <span
-            style={{
-              fontFamily: 'geakosa-o',
-              fontSize: SmallerScreen ? 28 : 40,
-              fontWeight: 700,
-              color: '#04040f',
-              mixBlendMode: 'difference',
-              transition: 'all 0.5s',
-              visibility: !OtherVisible ? 'hidden' : 'visible',
-            }}
-          >
-            Developer
-          </span> */}
           <span
             style={{
               fontFamily: 'geakosa-s',
               transition: 'all 1s',
-              fontSize: ScrollLock ? 45 : SmallerScreen ? 250 : 450,
+              fontSize: SmallerScreen ? 250 : 450,
               color: '#7106de',
               lineHeight: 0.8,
             }}
           >
-            {Name}
+            Skull
           </span>
 
           <Text
@@ -74,27 +53,12 @@ const Home = ({
               fontFamily: 'Exo, sans-serif',
               fontSize: SmallerScreen ? 15 : 17,
               transition: 'all 0.5s',
-              visibility: !OtherVisible ? 'collapse' : 'visible',
             }}
           >
             Full-stack web developer and designer.
           </Text>
         </Group>
       </ParallaxLayer>
-
-      {/* <ParallaxLayer
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-      offset={0.45}
-      speed={2.1}
-    >
-      <div
-        style={{ width: '2px', height: '150px', backgroundColor: 'white' }}
-      />
-    </ParallaxLayer> */}
     </>
   );
 };
