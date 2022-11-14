@@ -29,7 +29,8 @@ const Home = ({
             position: 'absolute',
             top: '15%',
             left: '45%',
-            zIndex: 0,
+            zIndex: 5,
+            mixBlendMode: 'difference',
           }}
           src="/skull.jpg"
           width={400}
