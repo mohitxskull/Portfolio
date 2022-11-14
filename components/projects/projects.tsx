@@ -78,7 +78,7 @@ const Projects = () => {
                   href="https://seagoat.vercel.app"
                   weight={800}
                   target="_blank"
-                  color="#883ddf"
+                  color="#7106de"
                 >
                   <Group spacing={5}>
                     Visit
@@ -90,7 +90,7 @@ const Projects = () => {
                   href="https://github.com/servedbyskull/SEAGOAT."
                   weight={800}
                   target="_blank"
-                  color="#883ddf"
+                  color="#7106de"
                 >
                   <Group spacing={5}>
                     Github
@@ -157,7 +157,7 @@ const Projects = () => {
                   href="https://kisss.vercel.app"
                   weight={800}
                   target="_blank"
-                  color="#883ddf"
+                  color="#7106de"
                 >
                   <Group spacing={5}>
                     Visit
@@ -169,7 +169,7 @@ const Projects = () => {
                   href="https://github.com/servedbyskull/SEAGOAT."
                   weight={800}
                   target="_blank"
-                  color="#883ddf"
+                  color="#7106de"
                 >
                   <Group spacing={5}>
                     Github
@@ -231,7 +231,7 @@ const Projects = () => {
                   href="https://hiddenmail.vercel.app"
                   weight={800}
                   target="_blank"
-                  color="#883ddf"
+                  color="#7106de"
                 >
                   <Group spacing={5}>
                     Visit
@@ -243,7 +243,7 @@ const Projects = () => {
                   href="https://github.com/servedbyskull/HiddenMail"
                   weight={800}
                   target="_blank"
-                  color="#883ddf"
+                  color="#7106de"
                 >
                   <Group spacing={5}>
                     Github

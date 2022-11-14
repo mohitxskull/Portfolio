@@ -1,4 +1,4 @@
-import { Group, Text } from '@mantine/core';
+import { Group, Image, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { ParallaxLayer } from '@react-spring/parallax';
 
@@ -24,25 +24,42 @@ const Home = ({
           alignItems: 'center',
         }}
       >
-        <Group direction="column" spacing={0} position="center">
-          <span
+        <Image
+          style={{
+            position: 'absolute',
+            top: '15%',
+            left: '45%',
+            zIndex: 0,
+          }}
+          src="/skull.jpg"
+          width={400}
+        />
+
+        <Group
+          direction="column"
+          spacing={0}
+          position="center"
+          style={{ zIndex: 1 }}
+        >
+          {/* <span
             style={{
               fontFamily: 'geakosa-o',
               fontSize: SmallerScreen ? 28 : 40,
               fontWeight: 700,
-              color: '#883ddf',
+              color: '#04040f',
+              mixBlendMode: 'difference',
               transition: 'all 0.5s',
               visibility: !OtherVisible ? 'hidden' : 'visible',
             }}
           >
             Developer
-          </span>
+          </span> */}
           <span
             style={{
               fontFamily: 'geakosa-s',
               transition: 'all 1s',
               fontSize: ScrollLock ? 45 : SmallerScreen ? 250 : 450,
-              color: '#883ddf',
+              color: '#7106de',
               lineHeight: 0.8,
             }}
           >

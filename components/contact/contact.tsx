@@ -18,7 +18,7 @@ const Contact = () => {
       <ParallaxLayer
         offset={3}
         speed={2}
-        style={{ backgroundColor: '#883ddf' }}
+        style={{ backgroundColor: '#7106de' }}
       />
 
       <ParallaxLayer

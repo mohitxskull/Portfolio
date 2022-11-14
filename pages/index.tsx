@@ -23,6 +23,7 @@ const Index: NextPage = () => {
 
   return (
     <>
+      <div className="noise" />
       <Parallax
         pages={4}
         style={{
@@ -32,6 +33,8 @@ const Index: NextPage = () => {
           msOverflowStyle: 'none',
           overflow: ScrollLock ? 'hidden' : 'auto',
           userSelect: 'none',
+          backgroundColor: '#04040f',
+          zIndex: 0,
         }}
       >
         <Home Name={Name} ScrollLock={ScrollLock} OtherVisible={OtherVisible} />
