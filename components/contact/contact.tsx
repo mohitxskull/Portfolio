@@ -43,7 +43,7 @@ const Contact = () => {
           <SimpleGrid
             style={{
               color: 'black',
-              width: '440px',
+              width: '500px',
             }}
             py="xl"
             px="lg"

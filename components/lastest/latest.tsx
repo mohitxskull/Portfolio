@@ -59,7 +59,7 @@ const Lastest = () => {
               Latest
             </span>
           </Center>
-          <SimpleGrid spacing={0}>
+          <SimpleGrid spacing={0} mx="md">
             {Code && (
               <>
                 <Box
@@ -87,6 +87,7 @@ const Lastest = () => {
                 height: 500,
                 borderRadius: '0px 0px 10px 10px',
                 border: '1px solid #777777',
+                width: '100%',
               }}
             >
               {Code ? (
@@ -97,6 +98,9 @@ const Lastest = () => {
                     }}
                     withLineNumbers
                     language="javascript"
+                    style={{
+                      width: '100%',
+                    }}
                   >
                     {Code}
                   </Prism>
