@@ -11,9 +11,12 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@mantine/core": "^4.2.11",
-    "@mantine/hooks": "^4.2.11",
-    "@mantine/next": "^4.2.11",
+    "@emotion/react": "^11.10.5",
+    "@emotion/server": "^11.10.0",
+    "@mantine/core": "^5.10.0",
+    "@mantine/hooks": "^5.10.0",
+    "@mantine/next": "^5.10.0",
+    "@mantine/prism": "^5.10.0",
     "@react-spring/parallax": "^9.4.5",
     "framer-motion": "^7.6.6",
     "next": "12.1.6",

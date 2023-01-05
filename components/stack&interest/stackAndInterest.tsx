@@ -1,4 +1,4 @@
-import { Box, Group, Text } from '@mantine/core';
+import { Box, SimpleGrid, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { ParallaxLayer } from '@react-spring/parallax';
 import React from 'react';
@@ -28,8 +28,8 @@ const StackAndInterest = () => {
   return (
     <>
       <ParallaxLayer
-        factor={0.1}
-        offset={1}
+        factor={0}
+        offset={2}
         speed={1}
         style={{
           display: 'flex',
@@ -38,35 +38,33 @@ const StackAndInterest = () => {
           color: 'white',
         }}
       >
-        <Group
-          position="center"
+        <SimpleGrid
           spacing={SmallerScreen ? 100 : 'md'}
-          direction={SmallerScreen ? 'column' : 'row'}
           style={{
             width: SmallerScreen ? '85vw' : '80vw',
             alignItems: 'stretch',
           }}
-          grow
+          breakpoints={[
+            { maxWidth: 768, cols: 1 },
+            { maxWidth: 2000, cols: 2 },
+          ]}
         >
-          <Group direction="column">
+          <SimpleGrid>
             <Text
               size="sm"
               color="#777777"
               style={{ textTransform: 'uppercase' }}
             >
-              Few Technologies I&apos;ve been working with recently
+              Few Technologies I&apos;ve been <br /> working with recently
             </Text>
-            <Group
-              // ml="sm"
+            <SimpleGrid
               spacing="lg"
               style={{
                 color: '#aaaaaa',
                 width: SmallerScreen ? '100%' : '85%',
               }}
-              direction="column"
-              grow
             >
-              <Group direction="column" spacing={0}>
+              <SimpleGrid spacing={0}>
                 {React.Children.toArray(
                   Technologies.map((tech) => (
                     <>
@@ -82,31 +80,16 @@ const StackAndInterest = () => {
                     </>
                   ))
                 )}
-              </Group>
-
-              {/* <Text component="a" href="/skills" color="#777777" size="sm">
-                <Group spacing={5}>
-                  All Skills
-                  <ArrowUpRight size={17} />
-                </Group>
-              </Text> */}
-
-              {/* <Group direction="column" spacing={0}>
-                <Text>React.js</Text>
-                <Text>Bootstrap</Text>
-                <Text>Node.js</Text>
-                <Text>Express.js</Text>
-                <Text>Git</Text>
-                <Text>Netlify</Text>
-                <Text>Firebase</Text>
-              </Group> */}
-            </Group>
-          </Group>
+              </SimpleGrid>
+            </SimpleGrid>
+          </SimpleGrid>
 
           <Box style={{ display: 'flex', justifyContent: 'center' }}>
-            <Group
-              direction="column"
-              style={{ maxWidth: SmallerScreen ? '400px' : '300px' }}
+            <SimpleGrid
+              style={{
+                maxWidth: SmallerScreen ? '400px' : '300px',
+                height: 'fit-content',
+              }}
             >
               <Text size="sm" color="#777777">
                 INTERESTS
@@ -119,9 +102,9 @@ const StackAndInterest = () => {
                 Front-end & Back-end Development, Cybersecurity, Web Design,
                 Electronics, Business, Blockchain
               </Text>
-            </Group>
+            </SimpleGrid>
           </Box>
-        </Group>
+        </SimpleGrid>
       </ParallaxLayer>
     </>
   );

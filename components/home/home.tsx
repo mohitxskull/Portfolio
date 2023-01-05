@@ -1,4 +1,4 @@
-import { Group, Image, Text } from '@mantine/core';
+import { Image, SimpleGrid, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { ParallaxLayer } from '@react-spring/parallax';
 
@@ -28,12 +28,7 @@ const Home = () => {
           width={400}
         />
 
-        <Group
-          direction="column"
-          spacing={0}
-          position="center"
-          style={{ zIndex: 1 }}
-        >
+        <SimpleGrid spacing={0} style={{ zIndex: 1, textAlign: 'center' }}>
           <span
             style={{
               fontFamily: 'geakosa-s',
@@ -57,7 +52,7 @@ const Home = () => {
           >
             Full-stack web developer and designer.
           </Text>
-        </Group>
+        </SimpleGrid>
       </ParallaxLayer>
     </>
   );

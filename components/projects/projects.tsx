@@ -1,4 +1,4 @@
-import { Box, Group, Text } from '@mantine/core';
+import { Box, Group, SimpleGrid, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { ParallaxLayer } from '@react-spring/parallax';
 import { ArrowUpRight } from 'tabler-icons-react';
@@ -10,7 +10,7 @@ const Projects = () => {
     <>
       <ParallaxLayer
         factor={0.1}
-        offset={2}
+        offset={3}
         speed={1}
         style={{
           display: 'flex',
@@ -19,12 +19,7 @@ const Projects = () => {
           color: 'white',
         }}
       >
-        <Group
-          position="center"
-          style={{ width: '95vw' }}
-          direction="column"
-          grow
-        >
+        <SimpleGrid style={{ width: '95vw' }}>
           <Box
             style={{ height: '2px', width: '100%', backgroundColor: '#909296' }}
           />
@@ -34,10 +29,10 @@ const Projects = () => {
               PROJECTS (3)
             </Text>
             <Group position="center">
-              <Group direction="column" spacing={0}>
+              <SimpleGrid spacing={0}>
                 <Text
                   style={{ lineHeight: 1 }}
-                  align="center"
+                  align="start"
                   ml="xl"
                   size="sm"
                   color="dimmed"
@@ -47,24 +42,30 @@ const Projects = () => {
                 <Text align="center" ml="xl" size="sm" color="dimmed">
                   WEB APPLICATION
                 </Text>
-              </Group>
+              </SimpleGrid>
             </Group>
           </Group>
 
-          <Group grow direction={SmallerScreen ? 'column' : 'row'}>
+          <SimpleGrid
+            breakpoints={[
+              { maxWidth: 768, cols: 1 },
+              { maxWidth: 2000, cols: 2 },
+            ]}
+            style={{ alignItems: 'center' }}
+          >
             <Text
-              color="#777777"
               style={{
                 fontFamily: 'geakosa-s',
                 fontSize: SmallerScreen ? 100 : 150,
                 lineHeight: 1.5,
                 letterSpacing: 1,
+                color: '#777777',
               }}
             >
               SEAGOAT
             </Text>
 
-            <Group direction="column">
+            <SimpleGrid style={{ height: 'fit-content' }}>
               <Text
                 color="#aaaaaa"
                 style={{ maxWidth: '400px', lineHeight: 1.2 }}
@@ -98,8 +99,8 @@ const Projects = () => {
                   </Group>
                 </Text>
               </Group>
-            </Group>
-          </Group>
+            </SimpleGrid>
+          </SimpleGrid>
 
           {/* ---------------------------------------------- */}
 
@@ -111,10 +112,10 @@ const Projects = () => {
           <Group grow position="apart" style={{ width: '100%' }}>
             <Text />
             <Group position="center">
-              <Group direction="column" spacing={0}>
+              <SimpleGrid spacing={0}>
                 <Text
                   style={{ lineHeight: 1 }}
-                  align="center"
+                  align="start"
                   ml="xl"
                   size="sm"
                   color="dimmed"
@@ -124,13 +125,19 @@ const Projects = () => {
                 <Text align="center" ml="xl" size="sm" color="dimmed">
                   WEB APPLICATION
                 </Text>
-              </Group>
+              </SimpleGrid>
             </Group>
           </Group>
 
           {/* ---------------------------------------------- */}
 
-          <Group grow direction={SmallerScreen ? 'column' : 'row'}>
+          <SimpleGrid
+            breakpoints={[
+              { maxWidth: 768, cols: 1 },
+              { maxWidth: 2000, cols: 2 },
+            ]}
+            style={{ alignItems: 'center' }}
+          >
             <Text
               color="#777777"
               style={{
@@ -143,7 +150,7 @@ const Projects = () => {
               KISS
             </Text>
 
-            <Group direction="column">
+            <SimpleGrid>
               <Text
                 color="#aaaaaa"
                 style={{ maxWidth: '400px', lineHeight: 1.2 }}
@@ -177,8 +184,8 @@ const Projects = () => {
                   </Group>
                 </Text> */}
               </Group>
-            </Group>
-          </Group>
+            </SimpleGrid>
+          </SimpleGrid>
 
           <Box
             mt="xl"
@@ -188,10 +195,10 @@ const Projects = () => {
           <Group grow position="apart" style={{ width: '100%' }}>
             <Text />
             <Group position="center">
-              <Group direction="column" spacing={0}>
+              <SimpleGrid spacing={0}>
                 <Text
                   style={{ lineHeight: 1 }}
-                  align="center"
+                  align="start"
                   ml="xl"
                   size="sm"
                   color="dimmed"
@@ -201,24 +208,33 @@ const Projects = () => {
                 <Text align="center" ml="xl" size="sm" color="dimmed">
                   WEB APPLICATION
                 </Text>
-              </Group>
+              </SimpleGrid>
             </Group>
           </Group>
 
-          <Group grow direction={SmallerScreen ? 'column' : 'row'}>
-            <Text
-              color="#777777"
+          <SimpleGrid
+            breakpoints={[
+              { maxWidth: 768, cols: 1 },
+              { maxWidth: 2000, cols: 2 },
+            ]}
+            style={{ alignItems: 'center' }}
+          >
+            <SimpleGrid
+              mt={60}
+              spacing={0}
               style={{
                 fontFamily: 'geakosa-s',
                 fontSize: SmallerScreen ? 100 : 150,
-                lineHeight: 1.5,
+                lineHeight: 0.7,
                 letterSpacing: 1,
+                color: '#777777',
               }}
             >
-              HIDDENMAIL
-            </Text>
+              <span>HIDDEN</span>
+              <span>MAIL</span>
+            </SimpleGrid>
 
-            <Group direction="column">
+            <SimpleGrid>
               <Text
                 color="#aaaaaa"
                 style={{ maxWidth: '400px', lineHeight: 1.2 }}
@@ -251,9 +267,9 @@ const Projects = () => {
                   </Group>
                 </Text>
               </Group>
-            </Group>
-          </Group>
-        </Group>
+            </SimpleGrid>
+          </SimpleGrid>
+        </SimpleGrid>
       </ParallaxLayer>
     </>
   );
