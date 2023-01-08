@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // import { useMediaQuery } from '@mantine/hooks';
 import {
   Box,
@@ -19,16 +20,32 @@ const codeOutput: {
   label: '=',
 };
 
+const codeDescription: {
+  color: DefaultMantineColor;
+  label?: string | undefined;
+} = {
+  color: 'blue',
+  label: '//',
+};
+
 //   const SmallerScreen = useMediaQuery('(max-width: 768px)');
 const Lastest = () => {
   const [Code, setCode] = useState<string | null>(null);
   const [Des, setDes] = useState<string | null>(null);
 
+  const fileName = 'Notification.js';
+  const fileId = '6ce64130a6cfb767d38b9d08dd49106d';
+  const highLightLines = {
+    1: codeDescription,
+    2: codeDescription,
+    3: codeDescription,
+  };
+
   useEffect(() => {
-    fetch('https://api.github.com/gists/fd8ade85705c650ae6dfc2b683d5a907')
+    fetch(`https://api.github.com/gists/${fileId}`)
       .then((response) => response.json())
       .then((data) => {
-        setCode(data.files['passGen.js'].content);
+        setCode(data.files[fileName].content);
         setDes(data.description);
       });
   }, []);
@@ -72,7 +89,7 @@ const Lastest = () => {
                   }}
                 >
                   <SimpleGrid spacing={0}>
-                    <span>passGen.js</span>
+                    <span>{fileName}</span>
                     <span style={{ fontWeight: 'normal', fontSize: 15 }}>
                       {Des}
                     </span>
@@ -88,14 +105,13 @@ const Lastest = () => {
                 borderRadius: '0px 0px 10px 10px',
                 border: '1px solid #777777',
                 width: '100%',
+                minWidth: '300px',
               }}
             >
               {Code ? (
                 <>
                   <Prism
-                    highlightLines={{
-                      87: codeOutput,
-                    }}
+                    highlightLines={highLightLines}
                     withLineNumbers
                     language="javascript"
                     style={{
