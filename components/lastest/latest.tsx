@@ -28,17 +28,19 @@ const codeDescription: {
   label: '//',
 };
 
-//   const SmallerScreen = useMediaQuery('(max-width: 768px)');
 const Lastest = () => {
   const [Code, setCode] = useState<string | null>(null);
   const [Des, setDes] = useState<string | null>(null);
 
-  const fileName = 'Notification.js';
-  const fileId = '6ce64130a6cfb767d38b9d08dd49106d';
+  const fileName = 'searchReact.jsx';
+  const fileId = 'c34da3ca989f429356c1f47f4b1e356c';
   const highLightLines = {
-    1: codeDescription,
-    2: codeDescription,
     3: codeDescription,
+    4: codeDescription,
+    5: codeDescription,
+    6: codeDescription,
+    7: codeDescription,
+    8: codeDescription,
   };
 
   useEffect(() => {
