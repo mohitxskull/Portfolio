@@ -4,7 +4,6 @@ import Home from '../components/home/home';
 import Projects from '../components/projects/projects';
 import Contact from '../components/contact/contact';
 import StackAndInterest from '../components/stack&interest/stackAndInterest';
-import Lastest from '../components/lastest/latest';
 
 const Index: NextPage = () => (
   <div>
@@ -30,7 +29,7 @@ const Index: NextPage = () => (
       }}
     >
       <Home />
-      <Lastest />
+      {/* <Lastest /> */}
       <StackAndInterest />
       <Projects />
       <Contact />
