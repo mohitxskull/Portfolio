@@ -8,13 +8,7 @@ import {
 } from '@mantine/core';
 import { useClipboard, useMediaQuery } from '@mantine/hooks';
 import { ParallaxLayer } from '@react-spring/parallax';
-import {
-  BrandGithub,
-  BrandGmail,
-  BrandInstagram,
-  BrandLinkedin,
-  BrandTwitter,
-} from 'tabler-icons-react';
+import { BrandGithub, BrandGmail } from 'tabler-icons-react';
 
 const Contact = () => {
   const Clipboard = useClipboard({ timeout: 500 });
@@ -75,7 +69,7 @@ const Contact = () => {
                 style={{
                   fontSize: '17px',
                   fontFamily: 'Archivo, sans-serif',
-                  textAlign: 'center',
+                  textAlign: 'left',
                   width: SmallerScreen ? '100%' : '50%',
                 }}
               >
@@ -83,7 +77,7 @@ const Contact = () => {
               </span>
               <Group
                 spacing={5}
-                position="center"
+                position="right"
                 style={{ width: SmallerScreen ? '100%' : '50%' }}
               >
                 <Tooltip
@@ -97,7 +91,7 @@ const Contact = () => {
                     <BrandGmail color="#000" />
                   </ActionIcon>
                 </Tooltip>
-                <ActionIcon
+                {/* <ActionIcon
                   variant="transparent"
                   onClick={() =>
                     window.open(
@@ -126,11 +120,11 @@ const Contact = () => {
                   }
                 >
                   <BrandTwitter color="#000" />
-                </ActionIcon>
+                </ActionIcon> */}
                 <ActionIcon
                   variant="transparent"
                   onClick={() =>
-                    window.open('https://github.com/servedbyskull', '_blank')
+                    window.open('https://github.com/mohitxskull', '_blank')
                   }
                 >
                   <BrandGithub color="#000" />
