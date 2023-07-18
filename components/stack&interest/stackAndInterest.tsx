@@ -6,14 +6,11 @@ import React from 'react';
 
 const Technologies = [
   'Rust',
-  'Javascript (ES6+)',
   'Typescript',
   'Mantine',
   'Next.js',
-  'Nest.js',
-  'Vercel',
-  'MongoDB',
-  'PostgreSQL',
+  'TRPC',
+  'Planetscale',
 ];
 
 // const ExpTechnologies = [
@@ -99,8 +96,8 @@ const StackAndInterest = () => {
                   color: '#aaaaaa',
                 }}
               >
-                Front-end & Back-end Development, Cybersecurity, Web Design,
-                Electronics, Business, Blockchain
+                Business Automation, Full-Stack Development, Cybersecurity,
+                Electronics
               </Text>
             </SimpleGrid>
           </Box>
